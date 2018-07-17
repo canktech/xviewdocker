@@ -32,7 +32,7 @@ class PyramidProposalOperator(mx.operator.CustomOp):
         self._rpn_min_size = rpn_min_size
 
     def forward(self, is_train, req, in_data, out_data, aux):
-        nms = py_nms_wrapper(self._threshold, in_data[0].context.device_id)
+        nms = py_nms_wrapper(self._threshold)
 
         batch_size = in_data[0].shape[0]
         if batch_size > 1:

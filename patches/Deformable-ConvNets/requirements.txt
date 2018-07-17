@@ -4,3 +4,4 @@ opencv-python
 pyyaml
 Pillow
 matplotlib
+pandas
